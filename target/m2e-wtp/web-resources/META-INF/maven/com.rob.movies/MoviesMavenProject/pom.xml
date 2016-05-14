@@ -44,29 +44,16 @@
           <target>1.6</target>
         </configuration>
       </plugin>
-       <plugin>
-                                <groupId>org.codehaus.cargo</groupId>
-                                <artifactId>cargo-maven2-plugin</artifactId>
-                                <version>1.2.0</version>
-                                <configuration>
-                                        <container>
-                                                <containerId>jboss7x</containerId>
-                                                <type>runtime</type>
-                                        </container>
-                                </configuration>
-                                <executions>
-                                        <execution>
-                                                <id>deploy</id>
-                                                <phase>install</phase>
-                                                <goals>
-                                                        <goal>deploy</goal>
-                                                </goals>
-                                        </execution>
-                                </executions>
-                        </plugin>
+      
     </plugins>
   </build>
   <dependencies>
+  <dependency>
+  <groupId>org.jboss.as.plugins</groupId>
+  <artifactId>jboss-as-maven-plugin</artifactId>
+  <version>7.7.Final</version>
+  <type>maven-plugin</type>
+</dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
