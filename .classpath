@@ -31,10 +31,10 @@
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+			<attribute name="owner.project.facets" value="jboss.m2"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="C:/Users/A00226084/Downloads/arquillian-warp-api-1.0.0.Alpha7.jar"/>
 	<classpathentry kind="lib" path="C:/Users/A00226084/Downloads/graphene-selenium-ftest-testng-standalone-2.0.0.Alpha5.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
