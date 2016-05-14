@@ -32,8 +32,7 @@ public class MovieWSTest {
     @Deployment(testable = false) 
     public static WebArchive createTestArchive() {
         return ShrinkWrap.create(WebArchive.class, "test.war").addClass(Movie.class);
-        // Adding omitted                                
-        //.addClasses(....)                 
+                     
     }   
 
     @Test
