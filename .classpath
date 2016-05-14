@@ -37,5 +37,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/A00226084/Downloads/arquillian-warp-api-1.0.0.Alpha7.jar"/>
 	<classpathentry kind="lib" path="C:/Users/A00226084/Downloads/graphene-selenium-ftest-testng-standalone-2.0.0.Alpha5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/A00226084/Downloads/cargo-maven2-plugin-1.4.19.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
