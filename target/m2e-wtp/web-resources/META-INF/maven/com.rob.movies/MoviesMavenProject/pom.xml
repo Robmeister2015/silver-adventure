@@ -26,37 +26,40 @@
 </dependencyManagement>
   <build>
     <plugins>
+    
     <plugin>
-        <groupId>org.jboss.as.plugins</groupId>
-        <artifactId>jboss-as-maven-plugin</artifactId>
-        <version>7.1.1.Final</version>
-        <configuration>
-            <hostname>http://54.171.195.74/</hostname>
-            <port>9990</port>
-            <username>Robmeister2016</username>
-            <password>LeannB20</password>
-            <name>JBoss</name>
-            <filename>1.0-SNAPSHOT.war</filename>
-        </configuration>
-        <executions>
-            <execution>
-                <id>deploy-jar</id>
-                <phase>install</phase>
-                <goals>
-                    <goal>deploy</goal>
-                </goals>
-            </execution>
-        </executions>
-    </plugin>
-    <plugin>
+    			<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.4</version>
+				<version>2.6</version>
 				<configuration>
 					<warSourceDirectory>WebContent</warSourceDirectory>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
-			
+			<plugin>
+  <groupId>org.codehaus.cargo</groupId>
+  <artifactId>cargo-maven2-plugin</artifactId>
+  <version>1.2.0</version>
+  <configuration>
+    <container>
+      <containerId>jboss51x</containerId>
+      <home>E:\jboss-5.1.0.GA</home>
+       <timeout>600000</timeout>
+        <append>false</append>
+    </container>
+    <configuration>
+      <type>existing</type>
+      <home>E:\jboss-5.1.0.GA\server\default</home>
+      <properties>
+       <cargo.servlet.port>8090</cargo.servlet.port>
+       <cargo.jboss.configuration>default</cargo.jboss.configuration>
+        <cargo.hostname>localhost</cargo.hostname>
+        <cargo.rmi.port>1099</cargo.rmi.port>
+      </properties>
+    </configuration>
+  </configuration>
+
+  </plugin> 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
