@@ -24,58 +24,30 @@
         </dependency>
     </dependencies>
 </dependencyManagement>
-<pluginRepositories>
-  <pluginRepository>
-    <id>repository.jboss.org_thirdparty-releases</id>
-    <name>JBoss.org third party releases repository</name>
-    <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
-    <releases>
-      <enabled>true</enabled>
-    </releases>
-    <snapshots>
-      <enabled>false</enabled>
-    </snapshots>
-  </pluginRepository>
-  <pluginRepository>
-    <id>repository.jboss.org_thirdparty-uploads</id>
-    <name>JBoss.org third party uploads repository</name>
-    <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-uploads</url>
-    <releases>
-      <enabled>true</enabled>
-    </releases>
-    <snapshots>
-      <enabled>false</enabled>
-    </snapshots>
-  </pluginRepository>
-</pluginRepositories>
-
-<repositories>
-  <repository>
-    <id>repository.jboss.org_thirdparty-releases</id>
-    <name>JBoss.org third party releases repository</name>
-    <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
-    <releases>
-      <enabled>true</enabled>
-    </releases>
-    <snapshots>
-      <enabled>false</enabled>
-    </snapshots>
-  </repository>
-  <repository>
-    <id>repository.jboss.org_thirdparty-uploads</id>
-    <name>JBoss.org third party uploads repository</name>
-    <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-uploads</url>
-    <releases>
-      <enabled>true</enabled>
-    </releases>
-    <snapshots>
-      <enabled>false</enabled>
-    </snapshots>
-  </repository>
-</repositories>
-
   <build>
     <plugins>
+    <plugin>
+        <groupId>org.jboss.as.plugins</groupId>
+        <artifactId>jboss-as-maven-plugin</artifactId>
+        <version>7.1.1.Final</version>
+        <configuration>
+            <hostname>http://54.171.195.74/</hostname>
+            <port>9990</port>
+            <username>Robmeister2016</username>
+            <password>LeannB20</password>
+            <name>JBoss</name>
+            <filename>1.0-SNAPSHOT.war</filename>
+        </configuration>
+        <executions>
+            <execution>
+                <id>deploy-jar</id>
+                <phase>install</phase>
+                <goals>
+                    <goal>deploy</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
     <plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.4</version>
@@ -94,37 +66,7 @@
           <target>1.6</target>
         </configuration>
       </plugin>
-      <plugin>
-  <groupId>org.codehaus.cargo</groupId>
-  <artifactId>cargo-maven2-plugin</artifactId>
-  <version>1.3.3</version>
-  <configuration>
-    <container>
-      <containerId>jboss51x</containerId>
-      <type>remote</type>
-    </container>
-    <configuration>
-      <type>runtime</type>
-      <properties>
-        <cargo.hostname>production27</cargo.hostname>
-        <cargo.rmi.port>11099</cargo.rmi.port>
-      </properties>
-    </configuration>
-  </configuration>
-  <dependencies>
-    <dependency>
-      <groupId>org.jboss.integration</groupId>
-      <artifactId>jboss-profileservice-spi</artifactId>
-      <version>5.1.0.GA</version>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.jbossas</groupId>
-      <artifactId>jboss-as-client</artifactId>
-      <version>5.1.0.GA</version>
-      <type>pom</type>
-    </dependency>
-  </dependencies>
-</plugin>
+      
     </plugins>
   </build>
   <dependencies>
