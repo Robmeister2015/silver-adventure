@@ -97,7 +97,7 @@
       <plugin>
   <groupId>org.codehaus.cargo</groupId>
   <artifactId>cargo-maven2-plugin</artifactId>
-  <version>${cargo.plugin.version}</version>
+  <version>1.4.5</version>
   <configuration>
     <container>
       <containerId>jboss51x</containerId>
