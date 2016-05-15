@@ -1,5 +1,6 @@
 package com.rob.movies;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,108 +10,118 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @XmlRootElement
-@Table(name="movies")
+@Table(name = "movies")
 public class Movie {
 
-	 @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-	    private int id;
-	    
-	    private String title;
-	    
-	    private String description;
-	    
-	    private String director;
-	    
-	    private String country;
-	    
-	    private int year;
-	    
-	    private double budget;
-	    
-	    private double rentalPrice;
-	    
-	    private String onLoan;
-	    
-	    private String picture;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private int id;
 
-	    public int getId() {
-	        return id;
-	    }
+	@Column(name = "title")
+	private String title;
 
-	    public void setId(int id) {
-	        this.id = id;
-	    }
+	@Column(name = "description")
+	private String description;
 
-	   public String getTitle(){
-		   return title;
-	   }
-	   
-	   public void setTitle(String title){
-		   this.title = title;
-	   }
-	   
-	   public String getDescription(){
-		   return description;
-	   }
-	   
-	   public void setDescription(String description){
-		   this.description = description;
-	   }
-	   
-	   public String getDirector(){
-		   return director;
-	   }
-	   
-	   public void setDirector(String director){
-		   this.director = director;
-	   }
-	   
-	   public String getCountry(){
-		   return country;
-	   }
-	   
-	   public void setCountry(String country){
-		   this.country = country;
-	   }
-	   
-	   public int getYear(){
-		   return year;
-	   }
-	   
-	   public void setYear(int year){
-		   this.year = year;
-	   }
-	   
-	   public double getBudget(){
-		   return budget;
-	   }
-	   
-	   public void setBudget(double budget){
-		   this.budget = budget;
-	   }
+	@Column(name = "director")
+	private String director;
 
-	   public double getRentalPrice(){
-		   return rentalPrice;
-	   }
-	   
-	   public void setRentalPrice(double rentalPrice){
-		   this.rentalPrice = rentalPrice;
-	   }
-	   
-	   public String getOnLoan(){
-		   return onLoan;
-	   }
-	   
-	   public void setOnLoan(String onLoan){
-		   this.onLoan = onLoan;
-	   }
-	   
-	   public String getPicture(){
-		   return picture;
-	   }
-	   
-	   public void setPicture(String picture){
-		   this.picture = picture;
-	   }
-	   
+	@Column(name = "country")
+	private String country;
+
+	@Column(name = "year")
+	private int year;
+
+	@Column(name = "budget")
+	private double budget;
+
+	@Column(name = "rentalPrice")
+	private double rentalPrice;
+
+	@Column(name = "onLoan")
+	private String onLoan;
+
+	@Column(name = "picture")
+	private String picture;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getDirector() {
+		return director;
+	}
+
+	public void setDirector(String director) {
+		this.director = director;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public double getBudget() {
+		return budget;
+	}
+
+	public void setBudget(double budget) {
+		this.budget = budget;
+	}
+
+	public double getRentalPrice() {
+		return rentalPrice;
+	}
+
+	public void setRentalPrice(double rentalPrice) {
+		this.rentalPrice = rentalPrice;
+	}
+
+	public String getOnLoan() {
+		return onLoan;
+	}
+
+	public void setOnLoan(String onLoan) {
+		this.onLoan = onLoan;
+	}
+
+	public String getPicture() {
+		return picture;
+	}
+
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
 }

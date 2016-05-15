@@ -6,7 +6,7 @@
     version="1.0">
     <persistence-unit name="movies">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
-        <jta-data-source>java:/MySQLDSCustomer</jta-data-source>
+        <jta-data-source>java:/MySQLMoviesDS</jta-data-source>
         <properties>
             <property name="hibernate.archive.autodetection" value="class" />
             <property name="hibernate.format_sql" value="true" />

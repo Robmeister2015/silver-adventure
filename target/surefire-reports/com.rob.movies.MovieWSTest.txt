@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.rob.movies.MoviesTest
+Test set: com.rob.movies.MovieWSTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.633 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.972 sec

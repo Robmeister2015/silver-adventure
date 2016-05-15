@@ -48,14 +48,14 @@ public class MovieWS {
 		}
 	}
 
-	@POST
+	@PUT
 	@Produces({ MediaType.APPLICATION_JSON })
 	public Response saveMovie(Movie movie) {
 		movieDao.save(movie);
 		return Response.status(201).entity(movie).build();
 	}
 
-	@PUT
+	@POST
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	public Movie update(Movie movie) {

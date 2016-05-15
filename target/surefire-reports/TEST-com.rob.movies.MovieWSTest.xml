@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.215" errors="0" skipped="0" tests="1" name="com.rob.movies.MoviesTest">
+<testsuite failures="0" time="2.595" errors="0" skipped="0" tests="1" name="com.rob.movies.MovieWSTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jre7\bin"/>
@@ -61,5 +61,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.215" classname="com.rob.movies.MoviesTest" name="testGettersAndSetters"/>
+  <testcase time="2.595" classname="com.rob.movies.MovieWSTest" name="testGetRequestToGetAllEntities"/>
 </testsuite>
