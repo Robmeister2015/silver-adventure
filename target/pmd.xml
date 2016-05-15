@@ -1,14 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.3.5" timestamp="2016-05-15T21:22:40.388">
-<file name="C:\Users\Robin\git\silver-adventure\src\main\java\com\rob\movies\MovieWS.java">
-<violation beginline="3" endline="3" begincolumn="1" endcolumn="27" rule="UnusedImports" ruleset="Import Statements" package="com.rob.movies" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'java.net.URLDecoder'
-</violation>
-<violation beginline="17" endline="17" begincolumn="1" endcolumn="30" rule="UnusedImports" ruleset="Import Statements" package="com.rob.movies" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'javax.ws.rs.QueryParam'
-</violation>
-<violation beginline="19" endline="19" begincolumn="1" endcolumn="32" rule="UnusedImports" ruleset="Import Statements" package="com.rob.movies" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/imports.html#UnusedImports" priority="4">
-Avoid unused imports such as 'javax.ws.rs.core.Request'
-</violation>
-</file>
+<pmd version="5.3.5" timestamp="2016-05-15T23:08:54.768">
 </pmd>

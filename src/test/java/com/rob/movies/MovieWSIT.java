@@ -16,10 +16,11 @@ import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 
 @RunWith(Arquillian.class)
-public class MovieWSTest {
+public class MovieWSIT {
 
 	final String GET_ALL_ENTITIES = "http://localhost:8080/MoviesMavenProject/movies";
 	final String GET_SINGLE_ENTITY = "";
@@ -48,13 +49,15 @@ public class MovieWSTest {
 	
 	@Deployment
 	public static JavaArchive createDeployment() {
-		return ShrinkWrap.create(JavaArchive.class).addClass(Movie.class).addAsManifestResource(EmptyAsset.INSTANCE,
+		JavaArchive archive = ShrinkWrap.create(JavaArchive.class).addClass(Movie.class).addAsManifestResource(EmptyAsset.INSTANCE,
 				"beans.xml");
+		archive.addClass(IntegrationTest.class);
+		return archive;
 	}
 
 	@Test
 	public void testGetRequestToGetAllEntities() throws IOException {
-		//change
+		
 //		obj = new URL(GET_ALL_ENTITIES);
 //		con = (HttpURLConnection) obj.openConnection();
 //		con.setRequestMethod(GET_REQUEST);
