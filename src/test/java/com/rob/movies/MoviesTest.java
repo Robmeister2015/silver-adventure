@@ -1,6 +1,7 @@
 package com.rob.movies;
 
 import org.jboss.arquillian.container.test.api.Deployment;
+import java.util.Scanner;
 import javax.inject.Inject;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
