@@ -62,7 +62,7 @@
         <execution>
             <goals>
                 <goal>check</goal>
-                <goal>cpd-check</goal>
+                <goal>pmd:pmd</goal>
             </goals>
         </execution>
     </executions>
