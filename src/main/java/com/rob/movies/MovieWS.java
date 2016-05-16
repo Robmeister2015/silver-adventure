@@ -13,6 +13,7 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 // comment
@@ -35,7 +36,8 @@ public class MovieWS {
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
 	@Path("/{id}")
-	public Response findMovieById(@PathParam("id") String id) {
+	public Response findMovieById(@PathParam("id") String id, @QueryParam("title") String title) {
+		System.out.println(title);
 		if (id.contains("=")) {
 			Movie movieMatch = getMovieByTitle(id);
 			return Response.status(200).entity(movieMatch).build();
@@ -71,8 +73,8 @@ public class MovieWS {
 	public Movie getMovieByTitle(String id) {
 
 		int something = id.indexOf("=");
-		System.out.println(something);
-		System.out.println(id);
+//		System.out.println(something);
+//		System.out.println(id);
 		id = id.substring(something + 1);
 		List<Movie> allMovies = movieDao.getAllMovies();
 		Movie movieMatch = new Movie();
